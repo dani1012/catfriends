@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  background: linear-gradient(114.67196031231879deg, rgba(136, 156, 118,1) 5.736111111111111%,rgba(6, 94, 96,1) 96.29166666666666%);
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -11,3 +12,4 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
