@@ -25,8 +25,10 @@ class CounterButton extends Component {
 
 	render() {
 		return (
-			<button onClick = {this.updateCount}>
-					Count:{this.state.count}
+			<button
+             id = 'counter'
+			 onClick = {this.updateCount}>
+			 Count:{this.state.count}
 			</button>
 		)
 	}

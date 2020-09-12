@@ -1,3 +1,5 @@
+import { apiCall } from './api/api';
+
 export const setSearchField = (text) => {
 
 	return {
@@ -8,15 +10,17 @@ export const setSearchField = (text) => {
 }
 
 
-
-export const requestRobots = ()=> (dispatch) => {
+export const requestRobots = (apiLink = 'https://jsonplaceholder.typicode.com/users') => 
+	   async (dispatch) => {
 	
+		  try{
 
-    dispatch({type: 'REQUEST_ROBOTS_PENDING'});
-	fetch('https://jsonplaceholder.typicode.com/users')
-		.then(response => response.json())
-		.then(users => dispatch({ type:'REQUEST_ROBOTS_SUCCESS', payload: users }))
-		.catch(error => dispatch( {type: 'REQUEST_ROBOTS_FAILED', payload: error }))
+		  	dispatch({type: 'REQUEST_ROBOTS_PENDING'});
+			const users = await apiCall(apiLink);
+		    dispatch({ type:'REQUEST_ROBOTS_SUCCESS', payload: users });
 
- 
+		    }catch(error) {
+		  	dispatch({ type: 'REQUEST_ROBOTS_FAILED', payload: error })
+		  }
+    
 }

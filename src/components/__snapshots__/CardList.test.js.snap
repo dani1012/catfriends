@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`expects to render CardList component 1`] = `
+<div>
+  <Card
+    email="nick110776@gmail.com"
+    id={1}
+    key="1"
+    name="Nick Chen"
+  />
+  <Card
+    email="Obi110776@gmail.com"
+    id={2}
+    key="2"
+    name="Obi Chen"
+  />
+  <Card
+    email="bobby6@gmail.com"
+    id={3}
+    key="3"
+    name="Bo Wang "
+  />
+  <Card
+    email="harry@gmail.com"
+    id={4}
+    key="4"
+    name="Harry Mckicknee"
+  />
+  <Card
+    email="nick1@gmail.com"
+    id={5}
+    key="5"
+    name="Bin Li"
+  />
+  <Card
+    email="Desouza@gmail.com"
+    id={6}
+    key="6"
+    name="Michael De Souze"
+  />
+  <Card
+    email="nick3@gmail.com"
+    id={7}
+    key="7"
+    name="Obibi Chen"
+  />
+  <Card
+    email="nick4@gmail.com"
+    id={8}
+    key="8"
+    name="Obibibib Chen"
+  />
+  <Card
+    email="nick5@gmail.com"
+    id={9}
+    key="9"
+    name="Luna Peng"
+  />
+  <Card
+    email="nick6@gmail.com"
+    id={10}
+    key="10"
+    name="Rob Ink"
+  />
+</div>
+`;
