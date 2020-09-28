@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`expects to render Header component 1`] = `
+<div
+  className="pa3"
+>
+  <input
+    aria-label="Search cats"
+    className="pa3 ba b--green bg-lightest-blue"
+    placeholder="search cats by name"
+    type="search"
+  />
+</div>
+`;

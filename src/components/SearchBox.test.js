@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from './Header';
+import SearchBox from './SearchBox';
 import Enzyme from 'enzyme';
 import {shallow} from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
@@ -11,12 +11,6 @@ Enzyme.configure({ adapter: new Adapter() });
 
 
 it ('expects to render Header component', () => {
-	const wrapper = shallow(<Header/>);
+	const wrapper = shallow(<SearchBox/>);
 	expect(toJson(wrapper)).toMatchSnapshot();
-})
-
-it('should not update component', () => {
-    const wrapper = shallow(<Header/>);
-    const shouldUpdate = wrapper.instance().shouldComponentUpdate()
-    expect(shouldUpdate).toBe(false) 
 })
