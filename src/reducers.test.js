@@ -9,7 +9,7 @@ const initialStateSearch = {
 
 
 it('should return initial state', () => {
-	expect(reducers.searchRobotsReducer(undefined, {})).toEqual({searchField: ''})
+	expect(reducers.searchRobotsReducer(undefined, {})).toEqual(initialStateSearch)
 })
 
 

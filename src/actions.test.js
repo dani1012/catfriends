@@ -1,7 +1,8 @@
 import * as actions from './actions';
+
+//give access to fake store for testing
 import configureMockStore from 'redux-mock-store';
 import thunkMiddleware from 'redux-thunk';
-import nock from 'nock';
 
 
 
@@ -22,23 +23,13 @@ it('should create an action to search robots', () => {
 
 describe("requestRobotsAction", ()=>{
 
-it('handles requesting robots API', () => {
-	expect.assertions(1)
-	const store = mockStore();
-
-	//Dispatches an action through the mock store. The action will be stored in an array inside the instance and executed.
-	store.dispatch(actions.requestRobots());
-	//Returns the actions of the mock store.
-	const action = store.getActions();
-
-	const expectedAction = {type: 'REQUEST_ROBOTS_PENDING'};
-	expect(action[0]).toEqual(expectedAction)
-})
-
+/*	Dispatches an action through the mock store. 
+    The action will be stored in an array inside the instance and executed.
+	Returns the actions of the mock store.*/
 
 it('should be pending and success', async () => {
-
-	//store.dispatch(actions.requestRobots(testingAPIurl)).then() doesn't work , therefore using async await instead
+	//using store.dispatch(actions.requestRobots(testingAPIurl)).then() received zero assertion calls
+    //therefore using async await instead 
     expect.assertions(3)
 	const store = mockStore();
 
@@ -46,7 +37,7 @@ it('should be pending and success', async () => {
     const testingAPIurl = 'https://jsonplaceholder.typicode.com/todos/1'
     await store.dispatch(actions.requestRobots(testingAPIurl))
     const action = store.getActions()
-    console.log('action', action[1].payload)
+  
     expect(action[0].type).toEqual('REQUEST_ROBOTS_PENDING')
     expect(action[1].type).toEqual('REQUEST_ROBOTS_SUCCESS')
     expect(action[1].payload).toEqual({
@@ -75,3 +66,4 @@ it('should be pending and fail', async () => {
 })
 
 })
+

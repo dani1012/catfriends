@@ -9,22 +9,15 @@ import toJson from 'enzyme-to-json';
 Enzyme.configure({ adapter: new Adapter() });
  
 
-let wrapper;
 
-beforeEach(() => {
+it('expects to render MainPage component', () => {
 	const mockProps = {
 		onRequestRobots: jest.fn(),
 		robots: [],
 		searchField: '',
 		isPending: false
 	} 
-
-wrapper = shallow(<MainPage {...mockProps}/>)
-
-})
-
-
-it('expect to render MainPage component', () => {
+	const wrapper = shallow(<MainPage {...mockProps}/>)
 	expect(toJson(wrapper)).toMatchSnapshot();
 });
 

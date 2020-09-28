@@ -13,3 +13,9 @@ it ('expects to render Card component', () => {
 	const wrapper = shallow(<Card/>);
 	expect(toJson(wrapper)).toMatchSnapshot();
 })
+
+
+it ('expects to render Card component', () => {
+	const wrapper = shallow(<Card/>);
+	expect((wrapper).length).toEqual(1);
+})

@@ -29,4 +29,13 @@ it('clicks the button', () => {
     wrapper.find('#counter').simulate('click');
     wrapper.find('#counter').simulate('click');
     expect(wrapper.state('count')).toEqual(2);
+    expect(wrapper.props().children).toEqual(["Count:", 2]);
 });
+
+
+it('updates component only when state changes', () => {
+    const wrapper = shallow(<CounterButton/>);
+    const nextState = {count :0}
+    const shouldUpdate = wrapper.instance().shouldComponentUpdate(nextState)
+    expect(shouldUpdate).toBe(false) 
+})
